@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+@layer components {
+	.typography {
+		@apply text-neutral-700;
+	}
+	.typography h2 {
+		@apply text-3xl font-bold;
+	}
+	.typography h3 {
+		@apply text-2xl font-bold;
+	}
+	.typography h4 {
+		@apply text-xl font-bold;
+	}
+	.typography h5 {
+		@apply text-lg font-bold;
+	}
+	.typography p {
+		@apply leading-normal text-lg font-medium;
+	}
+}
