@@ -1,0 +1,40 @@
+---
+// import styles from '../styles/typography.css'
+import TableOfContents from '../components/TableOfContents.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/typography.css';
+
+export async function getStaticPaths() {
+	const posts = await Astro.glob('../posts/*.md');
+	return posts.map((post) => ({
+		params: {
+			slug: post.frontmatter.slug,
+		},
+		props: {
+			post,
+		},
+	}));
+}
+const { Content, frontmatter, getHeadings } = Astro.props.post;
+const headings = getHeadings();
+---
+
+<Layout title={frontmatter.title}>
+	<main class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
+		<p class="text-neutral-600 font-mono">
+			{frontmatter.date}
+		</p>
+		<h1 class="mt-2 font-extrabold text-4xl mb-3">
+			{frontmatter.title}
+		</h1>
+		<p class="mb-4 font-mono text-neutral-600">
+			By {frontmatter.author}
+		</p>
+		<div>
+			<TableOfContents headings={headings} />
+		</div>
+		<div class="typography">
+			<Content />
+		</div>
+	</main>
+</Layout>

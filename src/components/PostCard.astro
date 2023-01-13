@@ -1,0 +1,21 @@
+---
+interface Props {
+	item: any;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="my-6">
+	<h2 class="font-bold text-xl mb-1">
+		<a
+			href={item.frontmatter.slug}
+			class="hover:underline hover:underline-offset-4 hover:decoration-2"
+		>
+			{item.frontmatter.title}
+		</a>
+	</h2>
+	<div class="text-neutral-600 font-mono">
+		{item.frontmatter.date}
+	</div>
+</div>
