@@ -132,8 +132,8 @@ export const getServerSideProps: GetServerSideProps<{
 export default Home;
 ```
 
+> Note: If you don't get intellisense for the GetStaticProps or GetServerSideProps types in your editor, you need to make them asyncronous. You can do this by adding the `async` keyword to the function declaration. For example, `export const getStaticProps: GetStaticProps = async () => { ... }` instead of `export const getStaticProps: GetStaticProps = () => { ... }`... This one of the really weird things about Next.js.
+
 ## Conclusion
 
 Now that you know how to correctly infer the return type of `GetStaticProps` or `GetServerSideProps`, you can make your Next.js pages more type-safe. If you have any questions or comments, feel free to leave a comment below (if the comment section happens to be ready).
-
-> This post was originally published on [Luka Hietala's blog](https://lukahietala.com/blog/how-to-correctly-type-the-data-returned-from-getstaticprops-or-getserversideprops-in-next-js).
