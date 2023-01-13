@@ -1,21 +1,21 @@
 ---
-import type { MarkdownHeading } from 'astro';
+import type { MarkdownHeading } from "astro";
 
 export interface Props {
-	headings: MarkdownHeading[];
+  headings: MarkdownHeading[];
 }
 
 const { headings } = Astro.props;
 ---
 
 <ul
-	class="list-disc text-neutral-800 border-t-[1px] border-b-[1px] border-slate-200 py-4 mt-8 mb-6 overflow-ellipsis"
+  class="list-disc text-neutral-800 border-t-[1px] border-b-[1px] border-slate-200 py-4 mt-8 mb-6 overflow-x-auto"
 >
-	{
-		headings.map((item) => (
-			<li class="text-primary ml-7 hover:underline w-max text-lg tracking-wide">
-				<a href={`#${item.slug}`}>{item.text}</a>
-			</li>
-		))
-	}
+  {
+    headings.map((item) => (
+      <li class="text-primary ml-7 hover:underline w-max text-lg tracking-wide">
+        <a href={`#${item.slug}`}>{item.text}</a>
+      </li>
+    ))
+  }
 </ul>

@@ -1,12 +1,13 @@
 ---
-import Card from '../components/PostCard.astro';
-import Layout from '../layouts/Layout.astro';
-import '../styles/typography.css';
-const content = await Astro.glob('../posts/*.md');
+import Card from "../components/PostCard.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/typography.css";
+const content = await Astro.glob("../posts/*.md");
 ---
 
 <Layout title="Luka Hietala - Posts">
-	<main class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
-		{content.map((post) => <Card item={post} />)}
-	</main>
+  <main class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
+    <h1 class="text-3xl font-bold">Posts (unfinished site)</h1>
+    {content.map((post) => <Card item={post} />)}
+  </main>
 </Layout>
