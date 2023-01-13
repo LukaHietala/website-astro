@@ -3,64 +3,68 @@
 @tailwind utilities;
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @layer components {
-	.typography {
-		@apply text-neutral-700 text-lg font-medium leading-relaxed;
-	}
-	.typography h2 {
-		@apply text-3xl font-bold my-7;
-	}
-	.typography h3 {
-		@apply text-2xl font-bold my-7;
-	}
-	.typography h4 {
-		@apply text-xl font-bold my-6;
-	}
+  .typography {
+    @apply text-neutral-700 text-lg font-medium leading-relaxed;
+  }
+  .typography h2 {
+    @apply text-3xl font-bold my-7;
+  }
+  .typography h3 {
+    @apply text-2xl font-bold my-7;
+  }
+  .typography h4 {
+    @apply text-xl font-bold my-6;
+  }
 
-	.typography p {
-		@apply my-5;
-	}
+  .typography p {
+    @apply my-5;
+  }
 
-	.typography a {
-		@apply text-primary hover:underline;
-	}
+  .typography a {
+    @apply text-primary hover:underline;
+  }
 
-	.typography ul {
-		@apply list-disc list-inside my-5;
-	}
+  .typography ul {
+    @apply list-disc list-inside my-5;
+  }
 
-	.typography ol {
-		@apply list-decimal list-inside my-5;
-	}
+  .typography ol {
+    @apply list-decimal list-inside my-5;
+  }
 
-	.typography li {
-		@apply my-1;
-	}
+  .typography li {
+    @apply my-1;
+  }
 
-	.typography blockquote {
-		@apply border-l-4 border-primary italic border-opacity-60 my-5 pl-3;
-	}
+  .typography blockquote {
+    @apply border-l-4 border-primary italic border-opacity-60 my-5 pl-3;
+  }
 
-	.typography pre {
-		@apply rounded p-3 md:p-5 my-5;
-	}
+  .typography pre {
+    @apply rounded p-3 md:p-5 my-5;
+  }
 
-	.typography code {
-		@apply text-sm md:text-base font-mono;
-	}
+  .typography pre > code {
+    @apply text-sm md:text-base font-mono;
+  }
 
-	.typography table {
-		@apply w-full border-collapse border border-neutral-200;
-	}
+  .typography code:not(pre > code) {
+    @apply bg-neutral-100 text-sm rounded p-1;
+  }
 
-	.typography table th {
-		@apply border border-neutral-200 bg-neutral-100 text-left p-2;
-	}
+  .typography table {
+    @apply w-full border-collapse border border-neutral-200;
+  }
 
-	.typography table td {
-		@apply border border-neutral-200 p-2;
-	}
+  .typography table th {
+    @apply border border-neutral-200 bg-neutral-100 text-left p-2;
+  }
+
+  .typography table td {
+    @apply border border-neutral-200 p-2;
+  }
 }
