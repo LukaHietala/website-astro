@@ -7,7 +7,24 @@ const content = await Astro.glob("../posts/*.md");
 
 <Layout title="Luka Hietala - Posts">
   <main class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
-    <h1 class="text-3xl font-bold">Posts (unfinished site)</h1>
+    <h1 class="text-4xl font-extrabold">Luka Hietala</h1>
+    <div class="flex flex-col gap-3">
+      <p class="text-gray-500 mt-2 font-mono">
+        Software Developer from Finland. tRPC, Next.js, React and TypeScript.
+        Also a big fan of the T3-Stack.
+      </p>
+      <a
+        href="https://github.com/LukaHietala"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline text-primary font-mono">Github</a
+      >
+    </div>
+    <h2
+      class="text-3xl font-bold mt-8 border-t-[1px] border-slate-200 pt-8 text-neutral-700"
+    >
+      Posts
+    </h2>
     {content.map((post) => <Card item={post} />)}
   </main>
 </Layout>
