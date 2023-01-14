@@ -20,10 +20,10 @@ const headings = getHeadings();
 ---
 
 <Layout title={frontmatter.title}>
-  <main class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
-    <p class="text-neutral-600 font-mono">
+  <article class="max-w-4xl mx-auto lg:px-0 md:px-3 px-4">
+    <div class="text-neutral-600 font-mono">
       {frontmatter.date}
-    </p>
+    </div>
     <h1 class="mt-2 font-extrabold text-4xl mb-3">
       {frontmatter.title}
     </h1>
@@ -36,5 +36,5 @@ const headings = getHeadings();
     <div class="typography">
       <Content />
     </div>
-  </main>
+  </article>
 </Layout>

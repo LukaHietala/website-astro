@@ -26,6 +26,8 @@ const nonDrafts = posts.filter((post) => !post.frontmatter.draft);
     >
       Posts
     </h2>
-    {nonDrafts.map((post) => <Card item={post} />)}
+    <section>
+      {nonDrafts.map((post) => <Card item={post} />)}
+    </section>
   </main>
 </Layout>
