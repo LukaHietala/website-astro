@@ -8,7 +8,7 @@ html {
 
 @layer components {
   .typography {
-    @apply text-neutral-700 text-lg font-medium leading-relaxed;
+    @apply text-neutral-700 text-lg font-medium leading-relaxed dark:text-neutral-300;
   }
   .typography h2 {
     @apply text-3xl font-bold my-7;
@@ -45,7 +45,7 @@ html {
   }
 
   .typography pre {
-    @apply rounded p-3 md:p-5 my-5;
+    @apply rounded p-3 md:p-5 my-5 dark:bg-neutral-900;
   }
 
   .typography pre > code {
@@ -53,18 +53,18 @@ html {
   }
 
   .typography code:not(pre > code) {
-    @apply bg-neutral-100 text-sm rounded p-1;
+    @apply bg-neutral-100 text-sm rounded p-1 dark:bg-neutral-800;
   }
 
   .typography table {
-    @apply w-full border-collapse border border-neutral-200;
+    @apply w-full border-collapse border border-neutral-200 dark:border-neutral-800;
   }
 
   .typography table th {
-    @apply border border-neutral-200 bg-neutral-100 text-left p-2;
+    @apply border border-neutral-200 bg-neutral-100 text-left p-2 dark:bg-neutral-800;
   }
 
   .typography table td {
-    @apply border border-neutral-200 p-2;
+    @apply border border-neutral-200 p-2 dark:border-neutral-800;
   }
 }
