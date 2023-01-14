@@ -10,8 +10,24 @@ import solidJs from "@astrojs/solid-js";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solidJs(), mdx()],
+  site: "https://lukahietala.vercel.app",
+  integrations: [
+    tailwind(),
+    solidJs(),
+    mdx(),
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en-US",
+        },
+      },
+    }),
+  ],
   markdown: {
     syntaxHighlight: "prism",
     drafts: true,
