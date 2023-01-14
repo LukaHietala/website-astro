@@ -2,7 +2,8 @@
 import Card from "../components/PostCard.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/typography.css";
-const content = await Astro.glob("../posts/*.md");
+const posts = await Astro.glob("../posts/*.md");
+const nonDrafts = posts.filter((post) => !post.frontmatter.draft);
 ---
 
 <Layout title="Luka Hietala - Posts">
@@ -25,6 +26,6 @@ const content = await Astro.glob("../posts/*.md");
     >
       Posts
     </h2>
-    {content.map((post) => <Card item={post} />)}
+    {nonDrafts.map((post) => <Card item={post} />)}
   </main>
 </Layout>

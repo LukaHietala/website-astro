@@ -14,5 +14,6 @@ export default defineConfig({
   integrations: [tailwind(), solidJs(), mdx()],
   markdown: {
     syntaxHighlight: "prism",
+    drafts: true,
   },
 });

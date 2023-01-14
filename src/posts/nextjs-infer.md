@@ -4,6 +4,7 @@ slug: "how-to-infer-gsp-or-gssp-return-types-in-nextjs"
 date: "December 30, 2022"
 author: "Luka Hietala"
 contributors: ["Luka Hietala"]
+draft: false
 ---
 
 ## Introduction
