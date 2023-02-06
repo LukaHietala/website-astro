@@ -40,6 +40,10 @@ html {
     @apply my-1;
   }
 
+  .typography ul > li {
+    @apply list-disc ml-4 my-3;
+  }
+
   .typography blockquote {
     @apply border-l-4 border-primary italic border-opacity-60 my-5 pl-3;
   }
