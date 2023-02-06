@@ -13,7 +13,7 @@ const { headings } = Astro.props;
 >
   {
     headings.map((item) => (
-      <li class="text-primary ml-7 hover:underline w-max text-lg tracking-wide">
+      <li class="text-primary ml-7 hover:underline w-max text-lg tracking-wide py-[1px]">
         <a href={`#${item.slug}`}>{item.text}</a>
       </li>
     ))
